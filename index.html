@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一周年快乐 ❤️</title>
+    <link rel="stylesheet" href="WYH-Pixel/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 弹幕祝福 -->
+    <div class="danmu-container" id="danmuContainer"></div>
+    
+    <!-- 背景星星 -->
+    <div class="bg-stars" id="bgStars"></div>
+    
+    <!-- 飘落的花瓣 -->
+    <div class="falling-petals" id="petals"></div>
+
+    <!-- Hero区域 -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="heart-container">
+                <div class="heart"></div>
+            </div>
+            <h1 class="title">一周年快乐</h1>
+            <p class="subtitle">吴宇航 ❤️ 张爽</p>
+            <p class="sub-subtitle">从2024年8月7日开始，每一天都是温暖的记忆</p>
+            <div class="scroll-hint">
+                <span>向下滚动探索</span>
+                <div class="arrow">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相恋天数计算器 -->
+    <section class="days-counter" id="counter">
+        <div class="container">
+            <h2 class="section-title">我们在一起的日子</h2>
+            <div class="counter-display">
+                <div class="counter-item">
+                    <span class="number" id="years">0</span>
+                    <span class="label">年</span>
+                </div>
+                <div class="counter-item">
+                    <span class="number" id="months">0</span>
+                    <span class="label">月</span>
+                </div>
+                <div class="counter-item">
+                    <span class="number" id="days">0</span>
+                    <span class="label">天</span>
+                </div>
+                <div class="counter-item">
+                    <span class="number" id="hours">0</span>
+                    <span class="label">时</span>
+                </div>
+            </div>
+            <p class="love-date">我们在一起：<span id="startDate">2024年8月7日</span></p>
+        </div>
+    </section>
+
+    <!-- 我们的故事时间线 -->
+    <section class="timeline" id="story">
+        <div class="container">
+            <h2 class="section-title">我们的故事</h2>
+            <div class="timeline-content">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">2024年8月7日</div>
+                        <div class="timeline-title">❤️ 在一起</div>
+                        <p class="timeline-desc">2024年8月7日，我们正式在一起了！从那一刻起，我的世界有了颜色。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">2024年9月</div>
+                        <div class="timeline-title">❤️ 相知</div>
+                        <p class="timeline-desc">我们开始聊天，从早到晚，有说不完的话。了解你的喜好。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">2024年10月</div>
+                        <div class="timeline-title">❤️ 告白</div>
+                        <p class="timeline-desc">我鼓起勇气向你表白，你说"我愿意"。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">2024年11月</div>
+                        <div class="timeline-title">❤️ 第一次</div>
+                        <p class="timeline-desc">我们一起过生日，一起旅行，幸福就这么简单。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">2024年12月</div>
+                        <div class="timeline-title">❤️ 跨年</div>
+                        <p class="timeline-desc">我们一起跨年，迎接2025年的到来。有你陪伴，真好。</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-current="true">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">2025年4月</div>
+                        <div class="timeline-title">❤️ 一周年</div>
+                        <p class="timeline-desc">我们一周年了！感谢有你，张爽 ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 照片墙 -->
+    <section class="gallery" id="photos">
+        <div class="container">
+            <h2 class="section-title">我们的瞬间</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="photos/1.jpg" alt="我们的回忆" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/2.jpg" alt="我们的回忆" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/3.jpg" alt="我们的回忆" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/4.jpg" alt="我们的回忆" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/5.jpg" alt="我们的回忆" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/6.jpg" alt="我们的回忆" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 互动区域 -->
+    <section class="interactive" id="interactive">
+        <div class="container">
+            <h2 class="section-title">点击爱心 ❤️</h2>
+            <div class="click-heart-wrapper">
+                <div class="click-heart" onclick="clickHeart()">❤️</div>
+            </div>
+            <p class="click-count">已点击 <span id="clickCount">0</span> 次</p>
+        </div>
+    </section>
+
+    <!-- 情话 -->
+    <section class="sweet-words" id="words">
+        <div class="container">
+            <h2 class="section-title">想对你说的话</h2>
+            <div class="words-display">
+                <p id="daily-word">和你在一起的每一天，都是我最珍贵的时光。</p>
+                <button class="new-word-btn" onclick="showNewWord()">换一句</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 情书 -->
+    <section class="letters-section" id="letters">
+        <div class="container">
+            <h2 class="section-title">我写给你的信</h2>
+            <div class="letters-wrapper" id="lettersWrapper"></div>
+        </div>
+    </section>
+
+<!-- 表白墙 -->
+    <section class="wall-section" id="wall">
+        <div class="container">
+            <h2 class="section-title">表白墙</h2>
+            <div class="messages-wall">
+                <div class="message-balloon">❤️ 张爽，我爱你</div>
+                <div class="message-balloon">❤️ 你是我的唯一</div>
+                <div class="message-balloon">❤️ 想陪你到永远</div>
+                <div class="message-balloon">❤️ 一周年快乐</div>
+                <div class="message-balloon">❤️ 有你真好</div>
+                <div class="message-balloon">❤️ 永远在一起</div>
+                <div class="message-balloon">❤️ 你是我的女孩</div>
+                <div class="message-balloon">❤️ 珍惜你一辈子</div>
+                <div class="message-balloon">❤️ 你是我的全世界</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 星空许愿 -->
+    <section class="wish-section" id="wish">
+        <div class="container">
+            <h2 class="section-title">星空许愿</h2>
+            <p class="wish-intro">点击星星，许下你的愿望</p>
+            <div class="wish-container" id="wishContainer">
+                <!-- 星星会通过JS生成 -->
+            </div>
+            <div class="wish-box">
+                <input type="text" id="wishInput" placeholder="输入你的愿望...">
+                <button onclick="makeWish()">许愿</button>
+            </div>
+            <p class="wish-list-title">我们的愿望：</p>
+            <div class="wish-list" id="wishList"></div>
+        </div>
+    </section>
+
+    <!-- 未来计划 -->
+    <section class="future-section" id="future">
+        <div class="container">
+            <h2 class="section-title">未来计划</h2>
+            <p class="future-intro">我想和你一起做的100件事</p>
+            <div class="bucket-list" id="bucketList">
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起看日出</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起看日落</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起去旅行</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起看海</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起爬山</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起看电影</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起做饭</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起养宠物</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起逛街</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起购物</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起去游乐场</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起坐摩天轮</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起吃火锅</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起吃烧烤</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起学做菜</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起学游泳</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起健身</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起拍情侣照</span>
+                </div>
+                <div class="bucket-item" onclick="toggleBucket(this)">
+                    <span class="bucket-check">○</span>
+                    <span class="bucket-text">一起穿情侣装</span>
+                </div>
+                <div class="bucket-item completed" onclick="toggleBucket(this)">
+                    <span class="bucket-check">✓</span>
+                    <span class="bucket-text">一起过生日</span>
+                </div>
+                <div class="bucket-item completed" onclick="toggleBucket(this)">
+                    <span class="bucket-check">✓</span>
+                    <span class="bucket-text">一起跨年</span>
+                </div>
+            </div>
+            <p class="bucket-progress">已完成: <span id="completedCount">2</span> / 20</p>
+        </div>
+    </section>
+
+    <!-- 情侣默契问答 -->
+    <section class="quiz-section" id="quiz">
+        <div class="container">
+            <h2 class="section-title">情侣默契测试</h2>
+            <p class="quiz-intro">测测我们的默契程度</p>
+            <div class="quiz-box" id="quizBox">
+                <div class="quiz-question" id="quizQuestion">
+                    <span class="q-num">1</span>
+                    <span class="q-text">我们第一次见面是在哪里？</span>
+                </div>
+                <div class="quiz-options">
+                    <div class="option" onclick="checkAnswer(0, this)">A. 咖啡店</div>
+                    <div class="option" onclick="checkAnswer(1, this)">B. 商场</div>
+                    <div class="option" onclick="checkAnswer(2, this)">C. 公园</div>
+                    <div class="option" onclick="checkAnswer(3, this)">D. 其他地方</div>
+                </div>
+            </div>
+            <div class="quiz-result" id="quizResult" style="display:none;">
+                <div class="result-score">🎉 默契得分</div>
+                <div class="result-number" id="scoreNumber">0</div>
+                <div class="result-text" id="resultText"></div>
+                <button onclick="restartQuiz()">再测一次</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 动态贺卡 -->
+    <section class="card-section" id="card">
+        <div class="container">
+            <h2 class="section-title">动态贺卡</h2>
+            <p class="card-intro">选择一张贺卡，送上你的祝福</p>
+            <div class="card-grid">
+                <div class="card-item" onclick="selectCard(0)">
+                    <div class="card-preview card-1">❤️</div>
+                    <span>爱心贺卡</span>
+                </div>
+                <div class="card-item" onclick="selectCard(1)">
+                    <div class="card-preview card-2">💕</div>
+                    <span>甜蜜贺卡</span>
+                </div>
+                <div class="card-item" onclick="selectCard(2)">
+                    <div class="card-preview card-3">💖</div>
+                    <span>浪漫贺卡</span>
+                </div>
+                <div class="card-item" onclick="selectCard(3)">
+                    <div class="card-preview card-4">💗</div>
+                    <span>永恒贺卡</span>
+                </div>
+            </div>
+            <div class="card-maker">
+                <input type="text" id="cardMessage" placeholder="输入祝福语..." maxlength="50">
+                <button onclick="createCard()">生成贺卡</button>
+            </div>
+            <div class="card-result" id="cardResult"></div>
+        </div>
+    </section>
+
+    <!-- 许愿池 -->
+    <section class="pond-section" id="pond">
+        <div class="container">
+            <h2 class="section-title">许愿池</h2>
+            <p class="pond-intro">投币许愿，梦想成真</p>
+            <div class="pond-container" onclick="throwCoin()">
+                <div class="pond">
+                    <div class="pond-water"></div>
+                    <div class="coin" id="throwCoin">🪙</div>
+                </div>
+                <div class="wishes-in-pond" id="wishesInPond"></div>
+            </div>
+            <div class="pond-wish">
+                <input type="text" id="pondWish" placeholder="投入愿望..." maxlength="20">
+                <button onclick="throwCoin()">投币许愿</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部表白 -->
+    <section class="footer-love" id="footer">
+        <div class="container">
+            <div class="heart-large"></div>
+            <h2 class="love-message">我爱你，张爽</h2>
+            <p class="love-sub">不是我选择了你，而是我非你不可</p>
+            <p class="love-year">一周年快乐 ❤️ 吴宇航 ❤️ 张爽</p>
+        </div>
+    </section>
+
+    <script src="WYH-Pixel/main.js"></script>
+</body>
+</html>

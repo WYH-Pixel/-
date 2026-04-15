@@ -17,54 +17,13 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* 弹幕祝福 */
-.danmu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 999;
-    overflow: hidden;
-}
-
-.danmu {
-    position: absolute;
-    white-space: nowrap;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--primary);
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-    animation: danmuMove 12s linear forwards;
-}
-
-@keyframes danmuMove {
-    from {
-        transform: translateX(100%);
-        left: 100%;
-    }
-    to {
-        transform: translateX(-100%);
-        left: -100%;
-    }
-}
-
-/* 调慢弹幕速度 */
-.danmu {
-    animation: danmuMove 20s linear forwards;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: 'Noto Serif SC', 'ZCOOL XiaoWei', serif;
     color: var(--text);
     background: var(--bg-gradient);
@@ -1563,5 +1522,89 @@ section {
     .letter-modal .letter-content {
         font-size: 0.95rem !important;
         line-height: 1.8 !important;
+    }
+
+    .letters-wrapper {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card-display {
+        padding: 30px 20px;
+    }
+
+    .card-display-text {
+        font-size: 1.2rem;
+    }
+
+    .quiz-question {
+        padding: 20px;
+    }
+
+    .q-text {
+        font-size: 1.1rem;
+    }
+
+    .result-number {
+        font-size: 3rem;
+    }
+
+    .sub-subtitle {
+        font-size: 0.85rem;
+        padding: 0 20px;
+    }
+
+    .danmu {
+        font-size: 1rem !important;
+    }
+
+    .bucket-progress {
+        font-size: 1rem;
+    }
+
+    .wish-list {
+        gap: 8px;
+    }
+
+    .wish-item {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .counter-display {
+        gap: 25px;
+    }
+
+    .bucket-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .scroll-hint {
+        display: none;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .wish-container {
+        height: 150px;
+    }
+
+    .pond-container {
+        height: 200px;
     }
 }

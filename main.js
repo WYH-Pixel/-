@@ -110,20 +110,23 @@ function renderLetters() {
     });
 }
 
-// 打开信件弹窗
+// 打开信件弹窗（支持触摸关闭）
 function openLetter(index) {
     const letter = letters[index];
     const modal = document.createElement('div');
     modal.className = 'letter-modal';
     modal.style.cssText = 'display:flex;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:10000;';
     modal.innerHTML = `
-        <div style="background:#fff;border-radius:20px;padding:40px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto;position:relative;">
-            <span onclick="this.parentElement.parentElement.remove()" style="position:absolute;top:20px;right:20px;font-size:1.5rem;cursor:pointer;">✕</span>
+        <div style="background:#fff;border-radius:20px;padding:40px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto;position:relative;touch-action:pan-y;">
+            <span onclick="this.parentElement.parentElement.remove()" style="position:absolute;top:15px;right:15px;font-size:1.5rem;cursor:pointer;padding:10px;">✕</span>
             <h3 style="font-size:1.5rem;color:var(--primary);margin-bottom:10px;">${letter.title}</h3>
             <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:25px;">${letter.date}</p>
             <p style="font-size:1rem;line-height:2;text-align:left;white-space:pre-wrap;">${letter.content}</p>
         </div>
     `;
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.remove();
+    });
     document.body.appendChild(modal);
 }
 
@@ -288,22 +291,28 @@ function initMouseHeart() {
     }
 }
 
-// 滚动爱心
+// 滚动爱心（优化移动端性能）
 function initScrollHeart() {
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        if (Math.random() > 0.95) {
-            const heart = document.createElement('div');
-            heart.textContent = '❤️';
-            heart.style.cssText = 'position:fixed;left:' + Math.random() * window.innerWidth + 'px;top:-50px;font-size:1.5rem;animation:scrollHeart 3s linear forwards;z-index:9999';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 3000);
+        if (!ticking && Math.random() > 0.95) {
+            ticking = true;
+            requestAnimationFrame(() => {
+                const heart = document.createElement('div');
+                heart.textContent = '❤️';
+                heart.style.cssText = 'position:fixed;left:' + Math.random() * window.innerWidth + 'px;top:-50px;font-size:1.5rem;animation:scrollHeart 3s linear forwards;z-index:9999';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 3000);
+                ticking = false;
+            });
         }
     });
 }
 
-// 点击爱心
+// 点击爱心（支持触摸）
 let clickTimes = 0;
-function clickHeart() {
+function clickHeart(e) {
+    if (e) e.preventDefault();
     clickTimes++;
     document.getElementById('clickCount').textContent = clickTimes;
     

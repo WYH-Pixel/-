@@ -14,6 +14,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* 弹幕祝福 */
@@ -1325,19 +1331,237 @@ section {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+
+    .timeline-content {
+        padding-left: 20px;
+    }
+
+    .timeline-content::before {
+        left: 3px;
+        width: 2px;
+    }
+
+    .timeline-item {
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+
+    .timeline-dot {
+        left: -20px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-card {
+        padding: 15px 18px;
+    }
+
+    .bucket-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .bucket-item {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        gap: 15px;
+    }
+
+    .card-preview {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+
+    .card-maker {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .card-maker input,
+    .card-maker button {
+        width: 100%;
+    }
+
+    .wish-box {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .wish-box input,
+    .wish-box button {
+        width: 100%;
+    }
+
+    .pond-wish {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .pond-wish input,
+    .pond-wish button {
+        width: 100%;
+    }
+
+    .click-heart {
+        font-size: 3.5rem;
+    }
+
+    .messages-wall {
+        gap: 10px;
+    }
+
+    .message-balloon {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
     .title {
         letter-spacing: 4px;
     }
 
     .counter-display {
-        gap: 20px;
+        gap: 15px;
+    }
+
+    .counter-item .number {
+        font-size: 2rem;
+    }
+
+    .counter-item .label {
+        font-size: 0.8rem;
     }
 
     .gallery-grid {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+
+    .timeline-desc {
+        font-size: 0.85rem;
+    }
+
+    .love-message {
+        font-size: 2rem;
+    }
+
+    .love-year {
+        font-size: 1.1rem;
+    }
+
+    .heart {
+        width: 70px;
+        height: 70px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 70px;
+        height: 70px;
+    }
+
+    .heart::before {
+        left: -35px;
+    }
+
+    .heart::after {
+        top: -35px;
+    }
+
+    .heart-large {
+        width: 45px;
+        height: 45px;
+    }
+
+    .heart-large::before,
+    .heart-large::after {
+        width: 45px;
+        height: 45px;
+    }
+
+    .heart-large::before {
+        left: -22px;
+    }
+
+    .heart-large::after {
+        top: -22px;
+    }
+
+    .future-intro {
+        font-size: 1rem;
+    }
+
+    .wish-container {
+        height: 200px;
+    }
+
+    .pond-container {
+        max-width: 300px;
+        height: 250px;
+    }
+
+    .pond {
+        width: 150px;
+        height: 60px;
+    }
+
+    #daily-word {
+        font-size: 1rem;
+        min-height: 60px;
+    }
+
+    .scroll-hint {
+        bottom: 25px;
+        font-size: 0.8rem;
+    }
+
+    button, .new-word-btn, .wish-box button, .card-maker button, .pond-wish button, .quiz-result button {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+
+    input[type="text"] {
+        min-height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .letter-modal > div {
+        padding: 30px 20px !important;
+        border-radius: 15px !important;
+    }
+
+    .letter-modal .letter-title {
+        font-size: 1.3rem !important;
+    }
+
+    .letter-modal .letter-content {
+        font-size: 0.95rem !important;
+        line-height: 1.8 !important;
     }
 }

@@ -266,24 +266,26 @@ function initStars() {
     }
 }
 
-// 鼠标跟随爱心
+// 鼠标/触摸跟随爱心（仅桌面端）
 function initMouseHeart() {
-    const hearts = ['❤️', '💕', '💗', '💖'];
-    const heart = document.createElement('div');
-    heart.className = 'mouse-heart';
-    heart.style.cssText = 'position:fixed;pointer-events:none;font-size:1.5rem;opacity:0;transition:opacity 0.3s;z-index:9999';
-    document.body.appendChild(heart);
-    
-    document.addEventListener('mousemove', (e) => {
-        heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-        heart.style.left = e.clientX + 'px';
-        heart.style.top = e.clientY + 'px';
-        heart.style.opacity = '1';
-    });
-    
-    document.addEventListener('mouseleave', () => {
-        heart.style.opacity = '0';
-    });
+    if (window.matchMedia('(hover: hover)').matches) {
+        const hearts = ['❤️', '💕', '💗', '💖'];
+        const heart = document.createElement('div');
+        heart.className = 'mouse-heart';
+        heart.style.cssText = 'position:fixed;pointer-events:none;font-size:1.5rem;opacity:0;transition:opacity 0.3s;z-index:9999';
+        document.body.appendChild(heart);
+        
+        document.addEventListener('mousemove', (e) => {
+            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            heart.style.opacity = '1';
+        });
+        
+        document.addEventListener('mouseleave', () => {
+            heart.style.opacity = '0';
+        });
+    }
 }
 
 // 滚动爱心
